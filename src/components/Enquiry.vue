@@ -2,7 +2,7 @@
   <!-- Testimonial & Enquiry Form Section -->
   <section class="grid grid-cols-1 md:grid-cols-2">
     <!-- Left: Testimonials -->
-    <div class="bg-[#F6EAEF] px-8 py-12">
+    <div :class="`${testimonialBgColor} px-8 py-12`">
       <h2 class="text-3xl md:text-[36px] font-primary leading-snug font-bold text-gray-800 mb-6">Our Testimonials</h2>
 
       <!-- User avatar + play (side by side) -->
@@ -68,38 +68,38 @@
     </div>
 
     <!-- Right: Contact Form -->
-    <div class="bg-red text-white px-8 py-12">
+    <div :class="`${formClass} px-8 py-12` ">
       <h2 class="text-3xl md:text-[36px] font-primary leading-snug font-bold mb-6">Connect With Us</h2>
       <form class="space-y-6">
         <!-- Full Name -->
         <div>
           <input type="text" placeholder="Full Name *" required
-            class="w-full bg-transparent border-b border-white text-white placeholder-white py-2 focus:outline-none" />
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Email -->
         <div>
           <input type="email" placeholder="Email *" required
-            class="w-full bg-transparent border-b border-white text-white placeholder-white py-2 focus:outline-none" />
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Mobile (with country dropdown auto by intl-tel-input) -->
         <div>
           <input id="phone" type="tel" placeholder="Mobile *" required
-            class="w-full bg-transparent border-b border-white text-white placeholder-white py-2 focus:outline-none" style="width:100% !important;" />
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" style="width:100% !important;" />
         </div>
         <!-- Company Name -->
         <div>
           <input type="text" placeholder="Company Name *" required
-            class="w-full bg-transparent border-b border-white text-white placeholder-white py-2 focus:outline-none" />
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Website URL -->
         <div>
           <input type="url" placeholder="Website URL" 
-            class="w-full bg-transparent border-b border-white text-white placeholder-white py-2 focus:outline-none" />
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Select Services -->
         <div>
           <select required
-            class="w-full bg-transparent border-b border-white text-white py-2 focus:outline-none">
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`">
             <option value="" disabled selected>Select Services *</option>
             <option>Branding & Design</option>
             <option>System Design</option>
@@ -115,12 +115,10 @@
             <option>Business Process Management</option>
           </select>
         </div>
-
-
         <!-- Message -->
         <div>
           <textarea placeholder="Type your message here *" required
-            class="w-full bg-transparent border-b border-white text-white placeholder-white py-2 focus:outline-none resize-none"></textarea>
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none resize-none`"></textarea>
         </div>
         <!-- Policy -->
         <div class="flex items-start gap-2 text-sm">
@@ -130,13 +128,21 @@
           </label>
         </div>
         <!-- Submit -->
-        <button type="submit" class="px-6 py-2 bg-white text-black uppercase rounded shadow hover:bg-yellow transition w-max">Submit</button>
+        <button type="submit" :class="`px-6 py-2 ${buttonClass} uppercase rounded shadow transition w-max`">Submit</button>
       </form>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+
+defineProps({
+  testimonialBgColor: { type: String, default: 'bg-[#F6EAEF]' },
+  formClass: { type: String, default: 'bg-red text-white' },
+  inputClass: { type: String, default: 'border-white text-white placeholder-white' },
+  buttonClass: { type: String, default: 'bg-white text-black hover:bg-yellow' }
+});
+
 import { onMounted, ref, computed, onUnmounted } from 'vue';
 
 // Testimonials data
