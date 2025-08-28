@@ -174,7 +174,135 @@
   </div>
 </section>
 
+<!-- Client Logo Section -->
+<section class="min-h-screen overflow-hidden flex flex-col justify-center items-center bg-white text-center px-4 py-16">
+  <h2 class="text-3xl md:text-[36px] font-primary leading-snug font-bold mb-10">Our Clientele</h2>
+  <!-- Client Logo -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center w-full max-w-6xl">
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/verdura-care.png" alt="Verdura Care Private Limited" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Verdura Care Private Limited</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/palsons-derma.png" alt="Palsons Derma Private Limited" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Palsons Derma Private Limited</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/wizderm.png" alt="Wizderm Speciality Skin & Hair Clinic" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Wizderm Speciality Skin & Hair Clinic</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/saratthi.webp" alt="Saratthi Mobility Private Limited" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Saratthi Mobility Private Limited</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/arrjavv.png" alt="Arrjavv Builders Private Limited" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Arrjavv Builders Private Limited</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/ncb.webp" alt="Nemichand Bamalwa Jewellers Private Limited" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Nemichand Bamalwa Jewellers Private Limited</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/rajbari-bawali.png" alt="The Rajbari Bawali" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">The Rajbari Bawali</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/kalo.webp" alt="Kalo Infra Group" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Kalo Infra Group</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/farmway.webp" alt="Farmway" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Farmway</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/neolayr.png" alt="Neolayr" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Neolayr</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/green-bench.png" alt="The Green Bench" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">The Green Bench</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/pmecpl.png" alt="Prime Mover Engineering Company Private Limited" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Prime Mover Engineering Company Private Limited</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/mfc.png" alt="Mukherjee Fertility Center" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Mukherjee Fertility Center</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/kutumb.webp" alt="Kutumb Group" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Kutumb Group</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/bmcs.png" alt="Best Melbourne Cleaning Services" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Best Melbourne Cleaning Services</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/lakme.png" alt="Lakme Academy Saltlake" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Lakme Academy Saltlake</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/njf.png" alt="Nutan Jeevan Foundation" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Nutan Jeevan Foundation</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/kathleen.png" alt="Kathleen Confectioners" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Kathleen Confectioners</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/reality-lounge.png" alt="Reality" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Reality</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/whatsup-cafe.png" alt="Whatsup Cafe" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Whatsup Cafe</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/99.png" alt="99" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">99</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/skincare-abhishek.png" alt="Dr. Abhishek De" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Dr. Abhishek De</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/fusion-india.png" alt="Fusion India" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Fusion India</span>
+    </div>
+    <!-- Client Logo -->
+    <div class="relative flex flex-col items-center client-logo-group">
+      <img src="../assets/images/brand/mahima.png" alt="Mahima India" class="w-[150px] h-[100px] object-contain client-logo">
+      <span class="client-label">Mahima India</span>
+    </div>
+    <!-- Add more logo as needed -->
+  </div>
+</section>
 
+<Portfolio />
 
 
 
@@ -184,7 +312,7 @@
 </template>
 
 <script setup lang="ts">
-
+import Portfolio from '@/components/Portfolio.vue';
 
 import { ref, onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
