@@ -197,7 +197,12 @@
   </section>
 
 
-  <Enquiry />
+  <Enquiry 
+  testimonialBgColor="bg-white"
+  formClass="bg-[#F2f2f2] text-dark"
+  inputClass="border-gray-800 text-dark placeholder-gray-500"
+  buttonClass="bg-red text-white hover:bg-yellow"
+  />
 </template>
 
 
@@ -231,11 +236,5 @@ onMounted(() => {
   });
 });
 
-defineProps({
-  testimonialBgColor: { type: String, default: 'bg-white' },
-  formClass: { type: String, default: 'bg-[#F2f2f2] text-dark' },
-  inputClass: { type: String, default: 'border-gray-800 text-dark placeholder-gray-500' },
-  buttonClass: { type: String, default: 'bg-red text-white hover:bg-yellow' }
-});
 
 </script>
