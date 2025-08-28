@@ -84,6 +84,39 @@ body {
   background-color: var(--background-light);
 }
 
+/* Hover Button Color classes */
+.hover-bg-blue:hover {
+  background-color: var(--color-blue);
+}
+
+.hover-bg-green:hover {
+  background-color: var(--color-green);
+}
+
+.hover-bg-red:hover {
+  background-color: var(--color-red);
+}
+
+.hover-bg-yellow:hover {
+  background-color: var(--color-yellow);
+}
+
+/* Hover Text Color classes */
+.hover-text-blue:hover {
+  color: var(--color-blue);
+}
+
+.hover-text-green:hover {
+  color: var(--color-green);
+}
+
+.hover-text-red:hover {
+  color: var(--color-red);
+}
+
+.hover-text-yellow:hover {
+  color: var(--color-yellow);
+}
 
 /* Utility classes */
 .usp-icon {
