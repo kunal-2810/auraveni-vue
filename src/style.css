@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Author Name: Kunal Sarkar */
+/* Company Name: Auraveni Solutions */
+/* Website: www.auraveni.com */
+
+
+/* Font and color variables for global use */
+:root {
+  --font-primary: 'DM Serif Display', serif;
+  --font-secondary: 'Manrope', sans-serif;
+
+  --color-blue: #537fbb; /* Steel Blue (a calm, professional blue) */
+  --color-green: #318867; /* Teal Green (fresh, balanced, natural) */
+  --color-red: #AC3B61; /* Deep Rose or Dark Raspberry (warm, rich, vibrant) */
+  --color-yellow: #F4B942; /* Goldenrod Yellow (bright, energetic accent) */
+  --color-text-primary: #2C2C2C; /* Dark Text */
+  --color-text-secondary: #333333; /* Light Text */
+
+  --background-light: #fafafa; /* Off-white Background */
+}
+
+
+/* Apply fonts globally */
+body {
+  font-family: var(--font-secondary);
+  color: var(--color-text-primary);
+  background-color: var(--background-light);
+}
+
+
+/* Font Style classes */
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+
+/* Font Color classes */
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-yellow {
+  color: var(--color-yellow);
+}
+
+
+/* Background Color classes */
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-dark {
+  background-color: var(--color-text-secondary);
+}
+
+.bg-light {
+  background-color: var(--background-light);
+}
+
+
+/* Utility classes */
+.usp-icon {
+      filter: drop-shadow(0 0 0px #fff);
+      opacity: 0.85;
+      transition: filter 0.4s, opacity 0.4s, transform 0.4s;
+    }
+    .usp-icon.glow {
+      filter: drop-shadow(0 0 16px #fff) drop-shadow(0 0 32px #fff);
+      opacity: 1;
+      transform: scale(1.15);
+    }
+    .client-logo {
+      filter: grayscale(100%);
+      transition: filter 0.4s;
+      position: relative;
+      z-index: 1;
+    }
+    .client-logo-group:hover .client-logo,
+    .client-logo-group:focus-within .client-logo {
+      filter: grayscale(0%);
+      z-index: 2;
+    }
+    .client-label {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      left: 50%;
+      bottom: -2.5rem;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      transition: opacity 0.3s;
+      z-index: 10;
+    }
+    .client-logo-group:hover .client-label,
+    .client-logo-group:focus-within .client-label {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    /* Force intl-tel-input input to full width */
+    .iti {
+      width: 100%;
+    }
+    .iti input {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+    /* Remove custom arrow styling for intl-tel-input */
+    .iti__arrow {
+      border-top: 4px solid #fff !important;
+      /* Remove or override this if you want to use a custom icon */
+      background: none !important;
+    }
+    /* Add custom dropdown icon for intl-tel-input */
+    .iti__arrow {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url('../assets/icons/chevron-down.svg') center/contain no-repeat !important;
+      border: none !important;
+    }
+    .iti__arrow.iti__arrow--up {
+      background: url('../assets/icons/chevron-up.svg') center/contain no-repeat !important;
+    }
+    .iti__country-list {
+      color: #222;
+    }
+    .iti__selected-flag {
+      background-color: transparent !important;
+    }
+
