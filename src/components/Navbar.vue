@@ -6,13 +6,13 @@
   ]">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
-      <div class="text-xl font-bold flex items-center space-x-2">
+      <a href="/" class="text-xl font-bold flex items-center space-x-2">
         <img
           :src="scrolled ? logoColor : logoWhite"
           alt="Logo"
           class="w-[180px] h-[62px] transition-all duration-300"
         />
-      </div>
+      </a>
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-5">
         <a href="tel:+913335448771" class="flex items-center space-x-1 transition-colors duration-300">

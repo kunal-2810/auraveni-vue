@@ -1,5 +1,5 @@
-
 <template>
+  <!-- Breadcrumb Section -->
   <Breadcrumb
     :bannerImage="bannerImage"
     pageTitle="About Us"
@@ -194,8 +194,7 @@
         </div>
       </div>
     </div>
-  </section>
-
+  </section>  
 
   <Enquiry 
   testimonialBgColor="bg-white"
