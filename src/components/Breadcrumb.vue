@@ -38,7 +38,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 
-const props = defineProps<{
+defineProps<{
   bannerImage: string
   pageTitle: string
   breadcrumb: Array<{ label: string; link?: string }>

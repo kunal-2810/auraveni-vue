@@ -60,7 +60,7 @@
   <section class="w-full py-16 bg-[#F9F9F9]">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16 px-4">
       <!-- Text -->
-      <div class="md:w-1/2 w-full text-left md:text-left text-center">
+      <div class="md:w-1/2 w-full text-center md:text-left">
         <h2 class="text-3xl md:text-[36px] font-bold font-primary leading-snug mb-4">Our Mission: Code. Design. Deliver. Empower.</h2>
         <p class="text-base md:text-lg text-gray-700">
           Our mission at Auraveni Solutions is to empower businesses of all sizes with innovative, scalable, and user-centric digital solutions. We aim to bridge the gap between technology and business goals by delivering high-quality software development, custom CRM systems, eCommerce platforms, mobile applications, and digital marketing strategies tailored to your unique needs.
@@ -80,7 +80,7 @@
   <section class="w-full py-16 bg-white">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center md:items-start gap-10 md:gap-16 px-4">
       <!-- Text -->
-      <div class="md:w-1/2 w-full text-left md:text-left text-center">
+      <div class="md:w-1/2 w-full md:text-left text-center">
         <h2 class="text-3xl md:text-[36px] font-bold font-primary leading-snug mb-4">Our Vision: Imagine. Innovate. Scale. Succeed.</h2>
         <p class="text-base md:text-lg text-gray-700">
           At Auraveni Solutions, our vision is to revolutionize how businesses embrace technology. We aim to become a global benchmark in delivering intelligent, scalable, and customer-centric digital solutions. By blending creativity, innovation, and strategic thinking, we empower startups, enterprises, and growing brands to thrive in the digital era. Our future-forward approach ensures that we don’t just build software or websites — we build sustainable ecosystems that drive growth, enhance user experience, and unlock new opportunities. We envision a world where every idea can be transformed into a high-performing digital reality.
@@ -108,7 +108,7 @@
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <!-- Icon & Title -->
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/innovation.svg" alt="Innovation" class="w-14 h-14 mb-2" />
+            <img :src="innovationIcon" alt="Innovation" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Innovation</span>
           </div>
           <!-- Description -->
@@ -120,7 +120,7 @@
         <!-- Module 2 -->
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/integrity.svg" alt="Integrity" class="w-14 h-14 mb-2" />
+            <img :src="integrityIcon" alt="Integrity" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Integrity</span>
           </div>
           <div class="md:w-2/3 text-base md:text-lg text-center md:text-left">
@@ -131,7 +131,7 @@
         <!-- Module 3 -->
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/excellence.svg" alt="Excellence" class="w-14 h-14 mb-2" />
+            <img :src="excellenceIcon" alt="Excellence" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Excellence</span>
           </div>
           <div class="md:w-2/3 text-base md:text-lg text-center md:text-left">
@@ -142,7 +142,7 @@
         <!-- Module 4 -->
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/client-centricity.svg" alt="Client-Centricity" class="w-14 h-14 mb-2" />
+            <img :src="clientCentricityIcon" alt="Client-Centricity" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Client-Centricity</span>
           </div>
           <div class="md:w-2/3 text-base md:text-lg text-center md:text-left">
@@ -153,7 +153,7 @@
         <!-- Module 5 -->
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/collaboration.svg" alt="Collaboration" class="w-14 h-14 mb-2" />
+            <img :src="collaborationIcon" alt="Collaboration" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Collaboration</span>
           </div>
           <div class="md:w-2/3 text-base md:text-lg text-center md:text-left">
@@ -164,7 +164,7 @@
         <!-- Module 6 -->
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/adaptability.svg" alt="Adaptability" class="w-14 h-14 mb-2" />
+            <img :src="adaptabilityIcon" alt="Adaptability" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Adaptability</span>
           </div>
           <div class="md:w-2/3 text-base md:text-lg text-center md:text-left">
@@ -175,7 +175,7 @@
         <!-- Module 7 -->
         <div class="flex flex-col md:flex-row md:items-center md:gap-8 p-6 module-animate" data-sr>
           <div class="flex flex-col items-center md:items-start md:w-1/3 mb-4 md:mb-0">
-            <img src="@/assets/icons/responsibility.svg" alt="Responsibility" class="w-14 h-14 mb-2" />
+            <img :src="responsibilityIcon" alt="Responsibility" class="w-14 h-14 mb-2" />
             <span class="text-xl font-semibold text-center md:text-left">Responsibility</span>
           </div>
           <div class="md:w-2/3 text-base md:text-lg text-center md:text-left">
@@ -202,26 +202,33 @@
 
 
 <script setup lang="ts">
-import bannerImage from '@/assets/images/blog-banner.webp'
+import bannerImage from '@/assets/images/blog-banner.webp';
 import Breadcrumb from '@/components/Breadcrumb.vue';
 import Enquiry from '@/components/Enquiry.vue';
+import { onMounted } from 'vue';
 
+import innovationIcon from '@/assets/icons/innovation.svg';
+import integrityIcon from '@/assets/icons/integrity.svg';
+import excellenceIcon from '@/assets/icons/excellence.svg';
+import clientCentricityIcon from '@/assets/icons/client-centricity.svg';
+import collaborationIcon from '@/assets/icons/collaboration.svg';
+import adaptabilityIcon from '@/assets/icons/adaptability.svg';
+import responsibilityIcon from '@/assets/icons/responsibility.svg';
+import ScrollReveal from 'scrollreveal';
 
-// Animate each module on scroll using ScrollReveal
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.ScrollReveal) {
-      ScrollReveal().reveal('.module-animate', {
-        origin: 'bottom',
-        distance: '40px',
-        duration: 700,
-        delay: 100,
-        interval: 120,
-        opacity: 0,
-        easing: 'ease-out',
-        reset: false, // Only animate once
-        cleanup: true
-      });
-    }
+// Animate each module on scroll using ScrollReveal (only for Our Values section)
+onMounted(() => {
+  ScrollReveal().reveal('#modules-section .module-animate', {
+    origin: 'bottom',
+    distance: '40px',
+    duration: 700,
+    delay: 100,
+    interval: 120,
+    opacity: 0,
+    easing: 'ease-out',
+    reset: false, // Only animate once
+    cleanup: true
   });
+});
 
 </script>
