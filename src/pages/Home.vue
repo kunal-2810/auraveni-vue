@@ -303,7 +303,9 @@
 </section>
 
 <Portfolio />
-
+<WhyChooseUs />
+<Blogs />
+<Enquiry />
 
 
 
@@ -313,6 +315,9 @@
 
 <script setup lang="ts">
 import Portfolio from '@/components/Portfolio.vue';
+import WhyChooseUs from '@/components/WhyChooseUs.vue';
+import Blogs from '@/components/Blogs.vue';
+import Enquiry from '@/components/Enquiry.vue';
 
 import { ref, onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
