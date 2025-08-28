@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^24.3.0",
     "gsap": "^3.13.0",
     "locomotive-scroll": "^4.1.4",
+    "path": "^0.12.7",
     "scrollreveal": "^4.0.9",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
