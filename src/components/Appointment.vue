@@ -33,7 +33,7 @@
   <!-- Enquiry Form Drawer -->
   <div
   id="enquiry-drawer"
-  class="fixed bottom-0 right-0 w-full max-w-md bg-white text-black shadow-2xl rounded-tl-2xl z-[9999] transition-transform duration-300"
+  class="fixed bottom-0 right-0 w-full max-w-md bg-white text-dark shadow-2xl rounded-tl-2xl z-[9999] transition-transform duration-300"
   :class="{ 'translate-y-full': !showEnquiry }"
   style="box-shadow: 0 -8px 32px rgba(0,0,0,0.18);"
   >

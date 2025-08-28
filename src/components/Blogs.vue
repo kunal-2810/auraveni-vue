@@ -13,19 +13,19 @@
       
       <!-- Blog Card 1 -->
       <a href="#" class="group block border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
-        <img src="https://placehold.co/900x450" alt="Blog 1" class="w-full h-auto">
+        <img src="@/assets/images/blogs/right-software-partner.webp" alt="What to Look for in a Software Development Partner: A Founder’s Checklist" class="w-full h-auto">
         <div class="p-6">
           <h3 class="text-xl text-left font-semibold mb-3 transition">
-            Empowering Innovation through Software Solutions
+            What to Look for in a Software Development Partner: A Founder’s Checklist
           </h3>
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center text-sm text-gray-500">
-              <img src="../assets/icons/calendar.svg" alt="Calendar Icon" class="w-4 h-4 mr-2">
-              <span>31 May, 2024</span>
+              <img src="@/assets/icons/calendar.svg" alt="Calendar Icon" class="w-4 h-4 mr-2">
+              <span>24 July, 2025</span>
             </div>
             <div class="text-primary font-semibold flex items-center group-hover:underline">
               Learn More 
-              <img src="../assets/icons/plus.svg" alt="Plus Icon" class="w-3 h-3 ml-1">
+              <img src="@/assets/icons/plus.svg" alt="Plus Icon" class="w-3 h-3 ml-1">
             </div>
           </div>
         </div>
@@ -33,19 +33,19 @@
 
       <!-- Blog Card 2 -->
       <a href="#" class="group block border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
-        <img src="https://placehold.co/900x450" alt="Blog 2" class="w-full h-auto">
+        <img src="@/assets/images/blogs/mobile-apps-for-small-businesses.webp" alt="How a Mobile App Can Boost Growth for Startups and Small Businesses" class="w-full h-auto">
         <div class="p-6">
           <h3 class="text-xl text-left font-semibold mb-3 transition">
-            Building Scalable Apps with Clean UI and System Design
+            How a Mobile App Can Boost Growth for Startups and Small Businesses
           </h3>
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center text-sm text-gray-500">
-              <img src="../assets/icons/calendar.svg" alt="Calendar Icon" class="w-4 h-4 mr-2">
-              <span>31 May, 2024</span>
+              <img src="@/assets/icons/calendar.svg" alt="Calendar Icon" class="w-4 h-4 mr-2">
+              <span>10 July, 2025</span>
             </div>
             <div class="text-primary font-semibold flex items-center group-hover:underline">
               Learn More 
-              <img src="../assets/icons/plus.svg" alt="Plus Icon" class="w-3 h-3 ml-1">
+              <img src="@/assets/icons/plus.svg" alt="Plus Icon" class="w-3 h-3 ml-1">
             </div>
           </div>
         </div>
@@ -53,19 +53,19 @@
 
       <!-- Blog Card 3 -->
       <a href="#" class="group block border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
-        <img src="https://placehold.co/900x450" alt="Blog 2" class="w-full h-auto">
+        <img src="@/assets/images/blogs/custom-crm-software-for-business.webp" alt="Why Your Business Needs Custom CRM Software in 2025: A Complete Guide" class="w-full h-auto">
         <div class="p-6">
           <h3 class="text-xl text-left font-semibold mb-3 transition">
-            Building Scalable Apps with Clean UI and System Design
+            Why Your Business Needs Custom CRM Software in 2025: A Complete Guide
           </h3>
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center text-sm text-gray-500">
-              <img src="../assets/icons/calendar.svg" alt="Calendar Icon" class="w-4 h-4 mr-2">
-              <span>31 May, 2024</span>
+              <img src="@/assets/icons/calendar.svg" alt="Calendar Icon" class="w-4 h-4 mr-2">
+              <span>28 June, 2025</span>
             </div>
             <div class="text-primary font-semibold flex items-center group-hover:underline">
               Learn More 
-              <img src="../assets/icons/plus.svg" alt="Plus Icon" class="w-3 h-3 ml-1">
+              <img src="@/assets/icons/plus.svg" alt="Plus Icon" class="w-3 h-3 ml-1">
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
     </div>
 
     <!-- CTA Button -->
-    <a href="#" class="inline-block bg-dark text-white uppercase px-6 py-3 rounded hover:bg-yellow transition">
+    <a href="/blogs" class="inline-block bg-dark text-white uppercase px-6 py-3 rounded hover:bg-yellow transition">
       View All Blogs
     </a>
   </div>
