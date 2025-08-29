@@ -70,35 +70,44 @@
     <!-- Right: Contact Form -->
     <div :class="`${formClass} px-8 py-12` ">
       <h2 class="text-3xl md:text-[36px] font-primary leading-snug font-bold mb-6">Connect With Us</h2>
-      <form class="space-y-6">
+      <form class="space-y-6" @submit.prevent="submitForm">
         <!-- Full Name -->
         <div>
           <input type="text" placeholder="Full Name *" required
+            v-model="form.fullName"
             :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Email -->
         <div>
           <input type="email" placeholder="Email *" required
+            v-model="form.email"
             :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Mobile (with country dropdown auto by intl-tel-input) -->
         <div>
           <input id="phone" type="tel" placeholder="Mobile *" required
-            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" style="width:100% !important;" />
+            v-model="form.mobile"
+            :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`"
+            style="width:100% !important;"
+            inputmode="numeric" pattern="[0-9]*"
+            @input="e => { const t = e.target as HTMLInputElement; if (t) { t.value = t.value.replace(/[^0-9]/g, ''); form.mobile = t.value; } }"
         </div>
         <!-- Company Name -->
         <div>
           <input type="text" placeholder="Company Name *" required
+            v-model="form.company"
             :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Website URL -->
         <div>
-          <input type="url" placeholder="Website URL" 
+          <input type="url" placeholder="Website URL (https://www.example.com)"
+            v-model="form.website"
             :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`" />
         </div>
         <!-- Select Services -->
         <div>
           <select required
+            v-model="form.service"
             :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none`">
             <option value="" disabled selected>Select Services *</option>
             <option>Branding & Design</option>
@@ -118,28 +127,33 @@
         <!-- Message -->
         <div>
           <textarea placeholder="Type your message here *" required
+            v-model="form.message"
             :class="`w-full bg-transparent border-b ${inputClass} py-2 focus:outline-none resize-none`"></textarea>
         </div>
         <!-- Policy -->
         <div class="flex items-start gap-2 text-sm">
-          <input type="checkbox" class="mt-1 border-white accent-white" />
+          <input type="checkbox" class="mt-1 border-white accent-white" v-model="form.policy" />
           <label>
             I agree to the <a href="#" class="font-semibold underline" target="_blank">Privacy Policy</a> and consent to receiving newsletters.
           </label>
         </div>
         <!-- Submit -->
-        <button type="submit" :class="`px-6 py-2 ${buttonClass} uppercase rounded shadow transition w-max`">Submit</button>
+        <button type="submit" :class="`px-6 py-2 ${buttonClass} uppercase rounded shadow transition w-max`" :disabled="loading">
+          <span v-if="loading">Submitting...</span>
+          <span v-else>Submit</span>
+        </button>
+        <div v-if="successMsg" class="text-green pt-2">{{ successMsg }}</div>
+        <div v-if="errorMsg" class="text-yellow pt-2">{{ errorMsg }}</div>
       </form>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-
 defineProps({
   testimonialBgColor: { type: String, default: 'bg-[#F6EAEF]' },
   formClass: { type: String, default: 'bg-red text-white' },
-  inputClass: { type: String, default: 'border-white text-white placeholder-white' },
+  inputClass: { type: String, default: 'border-white text-white placeholder-red-200' },
   buttonClass: { type: String, default: 'bg-white text-black hover:bg-yellow' }
 });
 
@@ -220,10 +234,109 @@ onUnmounted(() => {
   if (intervalId) clearInterval(intervalId);
 });
 
+// --- Enquiry Form Logic ---
+
+const form = ref({
+  fullName: '',
+  email: '',
+  mobile: '',
+  company: '',
+  website: '',
+  service: '',
+  message: '',
+  policy: false
+});
+
+const loading = ref(false);
+const successMsg = ref('');
+const errorMsg = ref('');
+
+// Example API endpoint (replace with your actual endpoint)
+const API_URL = 'https://your-api-endpoint.com/enquiry';
+
+async function submitForm() {
+  successMsg.value = '';
+  errorMsg.value = '';
+  if (!form.value.policy) {
+    errorMsg.value = 'You must agree to the Privacy Policy.';
+    return;
+  }
+  // Validate mobile number using intl-tel-input for international format, but validate length on user input only
+  const phoneInput = document.getElementById('phone');
+  let iti = null;
+  let internationalNumber = '';
+  if (phoneInput && window.intlTelInput) {
+    iti = window.intlTelInputGlobals.getInstance(phoneInput);
+    if (iti) {
+      if (!iti.isValidNumber()) {
+        errorMsg.value = 'Please enter a valid mobile number.';
+        return;
+      }
+      internationalNumber = iti.getNumber();
+      // Enforce length for selected country using the value as entered by the user
+      const userInput = (phoneInput as HTMLInputElement).value;
+      const countryData = iti.getSelectedCountryData();
+      let expectedLen = '';
+      if (countryData.iso2 === 'in') {
+        expectedLen = '10';
+      } else if (countryData && countryData.dialCode) {
+        if (window.intlTelInputUtils && window.intlTelInputUtils.getExampleNumber) {
+          try {
+            const example = window.intlTelInputUtils.getExampleNumber(countryData.iso2, true, window.intlTelInputUtils.numberType.MOBILE);
+            if (example) {
+              expectedLen = example.replace(/\D/g, '').length.toString();
+            }
+          } catch (e) {}
+        }
+      }
+      if (expectedLen) {
+        if (userInput.length !== parseInt(expectedLen)) {
+          errorMsg.value = `Mobile number must be exactly ${expectedLen} digits for the selected country.`;
+          return;
+        }
+      }
+      form.value.mobile = userInput;
+    }
+  }
+  // Validate website URL (optional, but if present must be valid)
+  if (form.value.website && !/^https?:\/\/[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!$&'()*+,;=.]+$/.test(form.value.website)) {
+    errorMsg.value = 'Please enter a valid website URL (e.g., https://www.example.com).';
+    return;
+  }
+  loading.value = true;
+  try {
+    // Send form data to API, use international number for mobile
+    const payload = { ...form.value, mobile: internationalNumber || form.value.mobile };
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!response.ok) throw new Error('Failed to submit. Please try again.');
+    successMsg.value = 'Thank you! Your enquiry has been submitted.';
+    // Reset form
+    form.value = {
+      fullName: '',
+      email: '',
+      mobile: '',
+      company: '',
+      website: '',
+      service: '',
+      message: '',
+      policy: false
+    };
+  } catch (err: any) {
+    errorMsg.value = err.message || 'Submission failed.';
+  } finally {
+    loading.value = false;
+  }
+}
+
 // intl-tel-input logic
 declare global {
   interface Window {
     intlTelInput?: any;
+    intlTelInputGlobals?: any;
   }
 }
 
@@ -248,7 +361,37 @@ onMounted(async () => {
   if (input && window.intlTelInput) {
     window.intlTelInput(input, {
       initialCountry: 'in',
+      nationalMode: true, // Show only national number in input
       utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js',
+    });
+    // Set initial maxlength for India
+    input.setAttribute('maxlength', '10');
+    // Listen for country change to update maxlength
+    input.addEventListener('countrychange', () => {
+      const iti = window.intlTelInputGlobals.getInstance(input);
+      if (iti) {
+        const countryData = iti.getSelectedCountryData();
+        let maxLen = '';
+        // Use metadata for national number length if available
+        if (countryData.iso2 === 'in') {
+          maxLen = '10';
+        } else if (countryData && countryData.dialCode) {
+          // Try to get example number length from intl-tel-input utils
+          if (window.intlTelInputUtils && window.intlTelInputUtils.getExampleNumber) {
+            try {
+              const example = window.intlTelInputUtils.getExampleNumber(countryData.iso2, true, window.intlTelInputUtils.numberType.MOBILE);
+              if (example) {
+                maxLen = example.replace(/\D/g, '').length.toString();
+              }
+            } catch (e) {}
+          }
+        }
+        if (maxLen) {
+          input.setAttribute('maxlength', maxLen);
+        } else {
+          input.removeAttribute('maxlength');
+        }
+      }
     });
   }
 });
