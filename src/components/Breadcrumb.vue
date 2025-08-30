@@ -42,6 +42,6 @@ defineProps<{
   bannerImage: string
   pageTitle: string
   breadcrumb: Array<{ label: string; link?: string }>
-  shortDescription: string
+  shortDescription?: string
 }>()
 </script>

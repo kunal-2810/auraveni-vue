@@ -98,7 +98,7 @@
       <a
         v-for="(blog, idx) in filteredBlogs"
         :key="blog.title + idx"
-        href="#"
+        :href="blog.link"
         class="group block border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300"
       >
         <img :src="blog.image" :alt="blog.title" class="w-full h-auto">
@@ -150,18 +150,21 @@ import blogImg3 from '@/assets/images/blogs/custom-crm-software-for-business.web
 const allBlogs = [
   {
     title: 'What to Look for in a Software Development Partner: A Founder’s Checklist',
+    link: '/blogs/checklist-for-choosing-software-development-partner',
     category: 'software',
     date: '24 July, 2025',
     image: blogImg1,
   },
   {
     title: 'How a Mobile App Can Boost Growth for Startups and Small Businesses',
+    link: '/blogs/mobile-app-growth-startups-small-businesses',
     category: 'mobile',
     date: '10 July, 2025',
     image: blogImg2,
   },
   {
     title: 'Why Your Business Needs Custom CRM Software in 2025: A Complete Guide',
+    link: '/blogs/custom-crm-software-for-business',
     category: 'crm',
     date: '28 June, 2025',
     image: blogImg3,

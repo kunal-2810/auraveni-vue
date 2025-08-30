@@ -20,7 +20,7 @@
         <p class="mb-6 max-w-xl text-white">
           Whether you're launching an eCommerce platform, upgrading your CRM, scaling with SaaS solutions, or driving digital transformation — Auraveni Solutions is your trusted technology partner. Call us at 
           <a href="tel:+913335448771" class="font-semibold hover:text-[#F4B400]">033 3544 8771</a> or 
-          <a href="tel:+919804525831" class="font-semibold hover:text-[#F4B400]">9804525831</a>, 
+          <a href="tel:+919804525831" class="font-semibold hover:text-[#F4B400]">098045 25831</a>, 
           or click below to get started. Let’s build something powerful together.
         </p>
         <button class="inline-block px-4 py-2 bg-white text-black rounded shadow hover:bg-gray-200 transition-colors duration-200 uppercase" type="button" @click="openEnquiry">
@@ -341,61 +341,77 @@ async function handleFormSubmit() {
 }
 
 // GSAP phone shake animation
+
 onMounted(() => {
-  if (phoneImg.value) {
-    let shakeTween: any = null;
-    gsap.set(phoneImg.value, { rotate: 0 });
-    ScrollTrigger.create({
-      trigger: ctaSection.value,
-      start: "top 70%",
-      end: "bottom 30%",
-      onEnter: () => {
-        if (!shakeTween) {
-          shakeTween = gsap.to(phoneImg.value, {
-            keyframes: [
-              { rotate: -15, duration: 0.1 },
-              { rotate: 15, duration: 0.1 },
-              { rotate: -10, duration: 0.1 },
-              { rotate: 10, duration: 0.1 },
-              { rotate: 0, duration: 0.1 }
-            ],
-            repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-          });
+  
+  setTimeout(()=>{
+     nextTick(() => {
+    console.log('[Appointment] onMounted fired')
+    if (phoneImg.value) {
+      console.log('[Appointment] phoneImg found:', phoneImg.value);
+      let shakeTween: any = null;
+      gsap.set(phoneImg.value, { rotate: 0 });
+      ScrollTrigger.create({
+        trigger: phoneImg.value,
+        markers: false,
+        onEnter: () => {
+          console.log("On section enter");
+          
+          if (!shakeTween) {
+            console.log('[Appointment] GSAP shake started (onEnter)');
+            shakeTween = gsap.to(phoneImg.value, {
+              keyframes: [
+                { rotate: -15, duration: 0.1 },
+                { rotate: 15, duration: 0.1 },
+                { rotate: -10, duration: 0.1 },
+                { rotate: 10, duration: 0.1 },
+                { rotate: 0, duration: 0.1 }
+              ],
+              repeat: -1,
+              yoyo: true,
+              ease: "power1.inOut"
+            });
+          }
+        },
+        onEnterBack: () => {
+          if (!shakeTween) {
+            console.log('[Appointment] GSAP shake started (onEnterBack)');
+            shakeTween = gsap.to(phoneImg.value, {
+              keyframes: [
+                { rotate: -15, duration: 0.1 },
+                { rotate: 15, duration: 0.1 },
+                { rotate: -10, duration: 0.1 },
+                { rotate: 10, duration: 0.1 },
+                { rotate: 0, duration: 0.1 }
+              ],
+              repeat: -1,
+              yoyo: true,
+              ease: "power1.inOut"
+            });
+          }
+        },
+        onLeave: () => {
+          if (shakeTween) {
+            console.log('[Appointment] GSAP shake stopped (onLeave)');
+            shakeTween.kill();
+            shakeTween = null;
+            gsap.set(phoneImg.value, { rotate: 0 });
+          }
+        },
+        onLeaveBack: () => {
+          if (shakeTween) {
+            console.log('[Appointment] GSAP shake stopped (onLeaveBack)');
+            shakeTween.kill();
+            shakeTween = null;
+            gsap.set(phoneImg.value, { rotate: 0 });
+          }
         }
-      },
-      onEnterBack: () => {
-        if (!shakeTween) {
-          shakeTween = gsap.to(phoneImg.value, {
-            keyframes: [
-              { rotate: -15, duration: 0.1 },
-              { rotate: 15, duration: 0.1 },
-              { rotate: -10, duration: 0.1 },
-              { rotate: 10, duration: 0.1 },
-              { rotate: 0, duration: 0.1 }
-            ],
-            repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-          });
-        }
-      },
-      onLeave: () => {
-        if (shakeTween) {
-          shakeTween.kill();
-          shakeTween = null;
-          gsap.set(phoneImg.value, { rotate: 0 });
-        }
-      },
-      onLeaveBack: () => {
-        if (shakeTween) {
-          shakeTween.kill();
-          shakeTween = null;
-          gsap.set(phoneImg.value, { rotate: 0 });
-        }
-      }
-    });
-  }
+      });
+    } else {
+      console.warn('[Appointment] phoneImg NOT found');
+    }
+  });
+  }, 500)
+ 
 });
 </script>
