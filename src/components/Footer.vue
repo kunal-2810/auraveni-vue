@@ -13,12 +13,12 @@
         </span>
       </button>
       <ul v-show="open === 1 || isDesktop">
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">About</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Case Studies</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Solutions</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Blogs</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Career</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Contact</a></li>
+        <li><a href="/about" class="block py-1 text-sm hover:text-[#F4B400]">About</a></li>
+        <li><a href="/case-studies" class="block py-1 text-sm hover:text-[#F4B400]">Case Studies</a></li>
+        <li><a href="/solutions" class="block py-1 text-sm hover:text-[#F4B400]">Solutions</a></li>
+        <li><a href="/blogs" class="block py-1 text-sm hover:text-[#F4B400]">Blogs</a></li>
+        <li><a href="/career" class="block py-1 text-sm hover:text-[#F4B400]">Career</a></li>
+        <li><a href="/contact" class="block py-1 text-sm hover:text-[#F4B400]">Contact</a></li>
       </ul>
     </div>
 
@@ -32,13 +32,13 @@
         </span>
       </button>
       <ul v-show="open === 2 || isDesktop">
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Branding & Design</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">System Design</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Website Design and Development</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">eCommerce Development</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Mobile Application Development</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Custom CRM Development</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Digital Marketing</a></li>
+        <li><a href="/branding-design" class="block py-1 text-sm hover:text-[#F4B400]">Branding & Design</a></li>
+        <li><a href="/system-design" class="block py-1 text-sm hover:text-[#F4B400]">System Design</a></li>
+        <li><a href="/website-design-development" class="block py-1 text-sm hover:text-[#F4B400]">Website Design and Development</a></li>
+        <li><a href="/ecommerce-development" class="block py-1 text-sm hover:text-[#F4B400]">eCommerce Development</a></li>
+        <li><a href="/mobile-app-development" class="block py-1 text-sm hover:text-[#F4B400]">Mobile Application Development</a></li>
+        <li><a href="/custom-crm-development" class="block py-1 text-sm hover:text-[#F4B400]">Custom CRM Development</a></li>
+        <li><a href="/digital-marketing" class="block py-1 text-sm hover:text-[#F4B400]">Digital Marketing</a></li>
       </ul>
     </div>
 
@@ -52,11 +52,11 @@
         </span>
       </button>
       <ul v-show="open === 3 || isDesktop">
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Terms & Conditions</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Privacy Policy</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Email Policy</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Disclaimer</a></li>
-        <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Sitemap</a></li>
+        <li><a href="/terms-and-conditions" class="block py-1 text-sm hover:text-[#F4B400]">Terms & Conditions</a></li>
+        <li><a href="/privacy-policy" class="block py-1 text-sm hover:text-[#F4B400]">Privacy Policy</a></li>
+        <li><a href="/email-policy" class="block py-1 text-sm hover:text-[#F4B400]">Email Policy</a></li>
+        <li><a href="/disclaimer" class="block py-1 text-sm hover:text-[#F4B400]">Disclaimer</a></li>
+        <li><a href="/sitemap" class="block py-1 text-sm hover:text-[#F4B400]">Sitemap</a></li>
       </ul>
     </div>
 
@@ -65,11 +65,11 @@
       <div>
         <span class="text-xl text-light font-primary font-semibold mb-2 block">Follow Us</span>
         <div class="flex space-x-4 mb-6">
-          <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6"></a>
-          <a href="#"><img src="../assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6"></a>
-          <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter/X" class="w-6 h-6"></a>
-          <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6"></a>
-          <a href="#"><img src="../assets/icons/youtube.svg" alt="YouTube" class="w-6 h-6"></a>
+          <a href="https://www.facebook.com/profile.php?id=61574948128293" target="_blank" rel="noopener"><img src="@/assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6"></a>
+          <!-- <a href="#" target="_blank" rel="noopener"><img src="@/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6"></a> -->
+          <!-- <a href="#" target="_blank" rel="noopener"><img src="@/assets/icons/twitter.svg" alt="Twitter/X" class="w-6 h-6"></a> -->
+          <a href="https://www.linkedin.com/company/auraveni/" target="_blank" rel="noopener"><img src="@/assets/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6"></a>
+          <a href="https://www.youtube.com/@auraveni" target="_blank" rel="noopener"><img src="@/assets/icons/youtube.svg" alt="YouTube" class="w-6 h-6"></a>
         </div>
       </div>
       <!-- Portal Login -->
@@ -86,8 +86,8 @@
           </span>
         </button>
         <ul x-show="open === 4 || window.innerWidth >= 1024" x-collapse>
-          <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Customer/Client Login</a></li>
-          <li><a href="#" class="block py-1 text-sm hover:text-[#F4B400]">Employee Login</a></li>
+          <li><a href="/customer-login" class="block py-1 text-sm hover:text-[#F4B400]">Customer/Client Login</a></li>
+          <li><a href="/employee-login" class="block py-1 text-sm hover:text-[#F4B400]">Employee Login</a></li>
         </ul>
       </div>
     </div>

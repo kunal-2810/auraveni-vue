@@ -1,6 +1,14 @@
 <template>
   <!-- Breadcrumb Section -->
-  <Breadcrumb :bannerImage="bannerImage" />
+  <Breadcrumb
+    :bannerImage="bannerImage"
+    pageTitle="Career"
+    :breadcrumb="[
+      { label: 'Home', link: '/' },
+      { label: 'Career' }
+    ]"
+    shortDescription="Explore Careers in Software Development, UI/UX Design, Digital Marketing & Beyond"
+  />
 
   <!-- Join Us Section -->
   <section class="w-full min-h-screen flex items-center justify-center bg-white py-16">

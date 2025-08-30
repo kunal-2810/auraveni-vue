@@ -1,11 +1,53 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import type { RouteLocationNormalized, NavigationGuardNext } from 'vue-router';
+import About from './pages/About.vue';
+import Blogs from './pages/Blogs.vue';
+import SoftwareDevelopmentPartner from './pages/blogs/SoftwareDevelopmentPartner.vue';
+import Home from './pages/Home.vue';
+import Services from './pages/Services.vue';
+import MobileApp from './pages/services/MobileApp.vue';
+import MobileUIUX from './pages/services/MobileUIUX.vue';
+import IOS from './pages/services/IOS.vue';
+import MobileAppGrowth from './pages/blogs/MobileAppGrowth.vue';
+import CustomCRMSoftware from './pages/blogs/CustomCRMSoftware.vue';
+import Career from './pages/Career.vue';
+import Contact from './pages/Contact.vue';
+import Solutions from './pages/Solutions.vue';
+import CaseStudies from './pages/CaseStudies.vue';
+import Maintenance from './pages/services/Maintenance.vue';
+import LandingPage from './pages/services/LandingPage.vue';
+import Backend from './pages/services/Backend.vue';
+import Frontend from './pages/services/Frontend.vue';
+import CMS from './pages/services/CMS.vue';
+import WebApp from './pages/services/WebApp.vue';
+import ResponsiveWeb from './pages/services/ResponsiveWeb.vue';
+import CustomWebsite from './pages/services/CustomWebsite.vue';
+import WebsiteDesign from './pages/services/WebsiteDesign.vue';
+import Deployment from './pages/services/Deployment.vue';
+import Scalability from './pages/services/Scalability.vue';
+import Enterprise from './pages/services/Enterprise.vue';
+import Database from './pages/services/Database.vue';
+import CloudInfrastructure from './pages/services/CloudInfrastructure.vue';
+import Wireframing from './pages/services/Wireframing.vue';
+import InformationArchitecture from './pages/services/InformationArchitecture.vue';
+import SystemUIUX from './pages/services/SystemUIUX.vue';
+import SystemDesign from './pages/services/SystemDesign.vue';
+import UIUX from './pages/services/UIUX.vue';
+import LogoDesign from './pages/services/LogoDesign.vue';
+import BrandStrategy from './pages/services/BrandStrategy.vue';
+import BrandingDesign from './pages/services/BrandingDesign.vue';
+import MobileSupport from './pages/services/MobileSupport.vue';
+import Wearable from './pages/services/Wearable.vue';
+import EnterpriseApp from './pages/services/EnterpriseApp.vue';
+import EcommerceApp from './pages/services/EcommerceApp.vue';
+import CrossPlatform from './pages/services/CrossPlatform.vue';
+import Android from './pages/services/Android.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('./pages/Home.vue'),
+    component: Home,
     meta: {
       title: 'Home | Auraveni Solutions',
       metaName: 'Home',
@@ -18,7 +60,7 @@ const routes = [
   {
     path: '/services',
     name: 'Services',
-    component: () => import('./pages/Services.vue'),
+    component: Services,
     meta: {
       title: 'Services | Auraveni Solutions',
       metaName: 'Services',
@@ -31,7 +73,7 @@ const routes = [
       {
         path: 'mobile-app',
         name: 'MobileApp',
-        component: () => import('./pages/services/MobileApp.vue'),
+        component: MobileApp,
         meta: {
           title: 'Mobile Application Development | Auraveni Solutions',
           metaName: 'Mobile Application Development',
@@ -44,7 +86,7 @@ const routes = [
           {
             path: 'ui-ux',
             name: 'MobileUIUX',
-            component: () => import('./pages/services/MobileUIUX.vue'),
+            component: MobileUIUX,
             meta: {
               title: 'Mobile App UI/UX Design | Auraveni Solutions',
               metaName: 'Mobile App UI/UX Design',
@@ -57,7 +99,7 @@ const routes = [
           {
             path: 'ios',
             name: 'IOS',
-            component: () => import('./pages/services/IOS.vue'),
+            component: IOS,
             meta: {
               title: 'iOS App Development | Auraveni Solutions',
               metaName: 'iOS App Development',
@@ -70,7 +112,7 @@ const routes = [
           {
             path: 'android',
             name: 'Android',
-            component: () => import('./pages/services/Android.vue'),
+            component: Android,
             meta: {
               title: 'Android App Development | Auraveni Solutions',
               metaName: 'Android App Development',
@@ -83,7 +125,7 @@ const routes = [
           {
             path: 'cross-platform',
             name: 'CrossPlatform',
-            component: () => import('./pages/services/CrossPlatform.vue'),
+            component: CrossPlatform,
             meta: {
               title: 'Cross-Platform App Development | Auraveni Solutions',
               metaName: 'Cross-Platform App Development',
@@ -96,7 +138,7 @@ const routes = [
           {
             path: 'ecommerce',
             name: 'EcommerceApp',
-            component: () => import('./pages/services/EcommerceApp.vue'),
+            component: EcommerceApp,
             meta: {
               title: 'eCommerce App Development | Auraveni Solutions',
               metaName: 'eCommerce App Development',
@@ -109,7 +151,7 @@ const routes = [
           {
             path: 'enterprise',
             name: 'EnterpriseApp',
-            component: () => import('./pages/services/EnterpriseApp.vue'),
+            component: EnterpriseApp,
             meta: {
               title: 'Enterprise App Development | Auraveni Solutions',
               metaName: 'Enterprise App Development',
@@ -122,7 +164,7 @@ const routes = [
           {
             path: 'wearable',
             name: 'Wearable',
-            component: () => import('./pages/services/Wearable.vue'),
+            component: Wearable,
             meta: {
               title: 'Wearable App Development | Auraveni Solutions',
               metaName: 'Wearable App Development',
@@ -135,7 +177,7 @@ const routes = [
           {
             path: 'support',
             name: 'MobileSupport',
-            component: () => import('./pages/services/MobileSupport.vue'),
+            component: MobileSupport,
             meta: {
               title: 'Mobile App Support & Maintenance | Auraveni Solutions',
               metaName: 'Mobile App Support & Maintenance',
@@ -150,7 +192,7 @@ const routes = [
       {
         path: 'branding-design',
         name: 'BrandingDesign',
-        component: () => import('./pages/services/BrandingDesign.vue'),
+        component: BrandingDesign,
         meta: {
           title: 'Branding & Design | Auraveni Solutions',
           metaName: 'Branding & Design',
@@ -163,7 +205,7 @@ const routes = [
           {
             path: 'brand-strategy',
             name: 'BrandStrategy',
-            component: () => import('./pages/services/BrandStrategy.vue'),
+            component: BrandStrategy,
             meta: {
               title: 'Brand Strategy & Positioning | Auraveni Solutions',
               metaName: 'Brand Strategy & Positioning',
@@ -176,7 +218,7 @@ const routes = [
           {
             path: 'logo-design',
             name: 'LogoDesign',
-            component: () => import('./pages/services/LogoDesign.vue'),
+            component: LogoDesign,
             meta: {
               title: 'Logo Design & Brand Identity Design | Auraveni Solutions',
               metaName: 'Logo Design & Brand Identity Design',
@@ -189,7 +231,7 @@ const routes = [
           {
             path: 'ui-ux',
             name: 'UIUX',
-            component: () => import('./pages/services/UIUX.vue'),
+            component: UIUX,
             meta: {
               title: 'UI/UX Design | Auraveni Solutions',
               metaName: 'UI/UX Design',
@@ -204,7 +246,7 @@ const routes = [
       {
         path: 'system-design',
         name: 'SystemDesign',
-        component: () => import('./pages/services/SystemDesign.vue'),
+        component: SystemDesign,
         meta: {
           title: 'System Design | Auraveni Solutions',
           metaName: 'System Design',
@@ -217,7 +259,7 @@ const routes = [
           {
             path: 'ui-ux',
             name: 'SystemUIUX',
-            component: () => import('./pages/services/SystemUIUX.vue'),
+            component: SystemUIUX,
             meta: {
               title: 'UI/UX Design (System) | Auraveni Solutions',
               metaName: 'UI/UX Design (System)',
@@ -230,7 +272,7 @@ const routes = [
           {
             path: 'information-architecture',
             name: 'InformationArchitecture',
-            component: () => import('./pages/services/InformationArchitecture.vue'),
+            component: InformationArchitecture,
             meta: {
               title: 'Information Architecture (IA) | Auraveni Solutions',
               metaName: 'Information Architecture (IA)',
@@ -243,7 +285,7 @@ const routes = [
           {
             path: 'wireframing',
             name: 'Wireframing',
-            component: () => import('./pages/services/Wireframing.vue'),
+            component: Wireframing,
             meta: {
               title: 'Wireframing & Prototyping | Auraveni Solutions',
               metaName: 'Wireframing & Prototyping',
@@ -256,7 +298,7 @@ const routes = [
           {
             path: 'cloud-infrastructure',
             name: 'CloudInfrastructure',
-            component: () => import('./pages/services/CloudInfrastructure.vue'),
+            component: CloudInfrastructure,
             meta: {
               title: 'Cloud Infrastructure Design | Auraveni Solutions',
               metaName: 'Cloud Infrastructure Design',
@@ -269,7 +311,7 @@ const routes = [
           {
             path: 'database',
             name: 'Database',
-            component: () => import('./pages/services/Database.vue'),
+            component: Database,
             meta: {
               title: 'Database Design and Management | Auraveni Solutions',
               metaName: 'Database Design and Management',
@@ -282,7 +324,7 @@ const routes = [
           {
             path: 'enterprise',
             name: 'Enterprise',
-            component: () => import('./pages/services/Enterprise.vue'),
+            component: Enterprise,
             meta: {
               title: 'Enterprise System Design | Auraveni Solutions',
               metaName: 'Enterprise System Design',
@@ -295,7 +337,7 @@ const routes = [
           {
             path: 'scalability',
             name: 'Scalability',
-            component: () => import('./pages/services/Scalability.vue'),
+            component: Scalability,
             meta: {
               title: 'Scalability Solutions | Auraveni Solutions',
               metaName: 'Scalability Solutions',
@@ -308,7 +350,7 @@ const routes = [
           {
             path: 'deployment',
             name: 'Deployment',
-            component: () => import('./pages/services/Deployment.vue'),
+            component: Deployment,
             meta: {
               title: 'Deployment & Maintenance | Auraveni Solutions',
               metaName: 'Deployment & Maintenance',
@@ -323,7 +365,7 @@ const routes = [
       {
         path: 'website-design',
         name: 'WebsiteDesign',
-        component: () => import('./pages/services/WebsiteDesign.vue'),
+        component: WebsiteDesign,
         meta: {
           title: 'Website Design and Development | Auraveni Solutions',
           metaName: 'Website Design and Development',
@@ -336,7 +378,7 @@ const routes = [
           {
             path: 'custom',
             name: 'CustomWebsite',
-            component: () => import('./pages/services/CustomWebsite.vue'),
+            component: CustomWebsite,
             meta: {
               title: 'Custom Website Design | Auraveni Solutions',
               metaName: 'Custom Website Design',
@@ -349,7 +391,7 @@ const routes = [
           {
             path: 'responsive',
             name: 'ResponsiveWeb',
-            component: () => import('./pages/services/ResponsiveWeb.vue'),
+            component: ResponsiveWeb,
             meta: {
               title: 'Responsive Web Design | Auraveni Solutions',
               metaName: 'Responsive Web Design',
@@ -362,7 +404,7 @@ const routes = [
           {
             path: 'web-app',
             name: 'WebApp',
-            component: () => import('./pages/services/WebApp.vue'),
+            component: WebApp,
             meta: {
               title: 'Web Application Development | Auraveni Solutions',
               metaName: 'Web Application Development',
@@ -375,7 +417,7 @@ const routes = [
           {
             path: 'cms',
             name: 'CMS',
-            component: () => import('./pages/services/CMS.vue'),
+            component: CMS,
             meta: {
               title: 'Content Management System (CMS) Development | Auraveni Solutions',
               metaName: 'Content Management System (CMS) Development',
@@ -388,7 +430,7 @@ const routes = [
           {
             path: 'frontend',
             name: 'Frontend',
-            component: () => import('./pages/services/Frontend.vue'),
+            component: Frontend,
             meta: {
               title: 'Frontend Development | Auraveni Solutions',
               metaName: 'Frontend Development',
@@ -401,7 +443,7 @@ const routes = [
           {
             path: 'backend',
             name: 'Backend',
-            component: () => import('./pages/services/Backend.vue'),
+            component: Backend,
             meta: {
               title: 'Backend Development | Auraveni Solutions',
               metaName: 'Backend Development',
@@ -414,7 +456,7 @@ const routes = [
           {
             path: 'landing-page',
             name: 'LandingPage',
-            component: () => import('./pages/services/LandingPage.vue'),
+            component: LandingPage,
             meta: {
               title: 'Landing Page Design & Development | Auraveni Solutions',
               metaName: 'Landing Page Design & Development',
@@ -427,7 +469,7 @@ const routes = [
           {
             path: 'maintenance',
             name: 'Maintenance',
-            component: () => import('./pages/services/Maintenance.vue'),
+            component: Maintenance,
             meta: {
               title: 'Website Maintenance and Support | Auraveni Solutions',
               metaName: 'Website Maintenance and Support',
@@ -444,7 +486,7 @@ const routes = [
   {
     path: '/case-studies',
     name: 'CaseStudies',
-    component: () => import('./pages/CaseStudies.vue'),
+    component: CaseStudies,
     meta: {
       title: 'Case Studies | Auraveni Solutions',
       metaName: 'Case Studies',
@@ -457,7 +499,7 @@ const routes = [
   {
     path: '/solutions',
     name: 'Solutions',
-    component: () => import('./pages/Solutions.vue'),
+    component: Solutions,
     meta: {
       title: 'Solutions | Auraveni Solutions',
       metaName: 'Solutions',
@@ -470,11 +512,10 @@ const routes = [
   {
     path: '/blogs',
     name: 'Blogs',
-    component: () => import('./pages/Blogs.vue'),
+    component: Blogs,
     meta: {
       title: 'Blogs | Auraveni Solutions',
-      metaName: 'Blogs',
-      ogSiteName: 'Auraveni Solutions',
+      ogSiteName: 'Blogs | Auraveni Solutions',
       ogImage: '/vite.svg',
       metaDescription: 'Read the latest blogs and insights from Auraveni Solutions.',
       metaKeywords: 'blogs, insights, auraveni',
@@ -483,10 +524,9 @@ const routes = [
     {
     path: '/blogs/checklist-for-choosing-software-development-partner',
     name: 'Founder’s Checklist for Choosing a Software Development Partner',
-    component: () => import('./pages/blogs/SoftwareDevelopmentPartner.vue'),
+    component: SoftwareDevelopmentPartner,
     meta: {
       title: 'Founder’s Checklist for Choosing a Software Development Partner',
-      metaName: 'SoftwareDevelopmentPartner',
       ogSiteName: 'Founder’s Checklist for Choosing a Software Development Partner | Auraveni Solutions',
       ogImage: '/vite.svg',
       metaDescription: 'Looking for the right software development partner? Here’s a checklist to help you evaluate agencies and choose the best tech partner for long-term success.',
@@ -496,10 +536,9 @@ const routes = [
     {
       path: '/blogs/mobile-app-growth-startups-small-businesses',
       name: 'Boost Business Growth with Mobile Apps | Small Business App Guide',
-      component: () => import('./pages/blogs/MobileAppGrowth.vue'),
+      component: MobileAppGrowth,
       meta: {
         title: 'Boost Business Growth with Mobile Apps | Small Business App Guide',
-        metaName: 'MobileAppGrowth',
         ogSiteName: 'Boost Business Growth with Mobile Apps | Small Business App Guide | Auraveni Solutions',
         ogImage: '/vite.svg',
         metaDescription: 'Discover how mobile apps drive growth for startups & small businesses. Learn key features, benefits & why custom apps matter in today’s market.',
@@ -509,7 +548,7 @@ const routes = [
     {
       path: '/blogs/custom-crm-software-for-business',
       name: 'Custom CRM Software for Businesses in 2025 | Complete CRM Guide',
-      component: () => import('./pages/blogs/CustomCRMSoftware.vue'),
+      component: CustomCRMSoftware,
       meta: {
         title: 'Custom CRM Software for Businesses in 2025 | Complete CRM Guide',
         metaName: 'CustomCRMSoftware',
@@ -522,10 +561,9 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: () => import('./pages/About.vue'),
+    component: About,
     meta: {
       title: 'About Us | Auraveni Solutions',
-      metaName: 'About Us',
       ogSiteName: 'Auraveni Solutions',
       ogImage: '/vite.svg',
       metaDescription: 'Learn more about Auraveni Solutions, our team, and our mission.',
@@ -535,10 +573,9 @@ const routes = [
   {
     path: '/career',
     name: 'Career',
-    component: () => import('./pages/Career.vue'),
+    component: Career,
     meta: {
       title: 'Career | Auraveni Solutions',
-      metaName: 'Career',
       ogSiteName: 'Auraveni Solutions',
       ogImage: '/vite.svg',
       metaDescription: 'Join our team! Explore career opportunities at Auraveni Solutions.',
@@ -548,10 +585,9 @@ const routes = [
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import('./pages/Contact.vue'),
+    component: Contact,
     meta: {
       title: 'Contact Us | Auraveni Solutions',
-      metaName: 'Contact Us',
       ogSiteName: 'Auraveni Solutions',
       ogImage: '/vite.svg',
       metaDescription: 'Contact Auraveni Solutions for your business needs.',

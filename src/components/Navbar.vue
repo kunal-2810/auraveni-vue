@@ -96,78 +96,102 @@
           <div v-show="sidebarExpand === 1">
             <ul class="mb-2">
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/design.png" alt="Branding & Design" class="w-6 h-6" />
-                <span>Branding & Design</span>
+                <a href="/services/branding-design" class="flex items-center gap-3 w-full">
+                  <img src="@/assets/icons/services/color/design.png" alt="Branding & Design" class="w-6 h-6" />
+                  <span>Branding & Design</span>
+                </a>
               </li>
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/system-design.svg" alt="System Design" class="w-6 h-6" />
-                <span>System Design</span>
+                <a href="/services/system-design" class="flex items-center gap-3 w-full">
+                  <img src="@/assets/icons/services/color/system-design.svg" alt="System Design" class="w-6 h-6" />
+                  <span>System Design</span>
+                </a>
               </li>
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/website-design.png" alt="Website Design & Development" class="w-6 h-6" />
-                <span>Website Design & Development</span>
+                <a href="/services/website-design-development" class="flex items-center gap-3 w-full">
+                  <img src="@/assets/icons/services/color/website-design.png" alt="Website Design & Development" class="w-6 h-6" />
+                  <span>Website Design & Development</span>
+                </a>
               </li>
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/ecommerce.svg" alt="eCommerce Development" class="w-6 h-6" />
-                <span>eCommerce Development</span>
+                <a href="/services/ecommerce-development" class="flex items-center gap-3 w-full">
+                  <img src="@/assets/icons/services/color/ecommerce.svg" alt="eCommerce Development" class="w-6 h-6" />
+                  <span>eCommerce Development</span>
+                </a>
               </li>
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/app-development.png" alt="Mobile App Development" class="w-6 h-6" />
-                <span>Mobile App Development</span>
+                <a href="/services/mobile-app-development" class="flex items-center gap-3 w-full">
+                  <img src="@/assets/icons/services/color/app-development.png" alt="Mobile App Development" class="w-6 h-6" />
+                  <span>Mobile App Development</span>
+                </a>
               </li>
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/customer-relationship-management.png" alt="Custom CRM Development" class="w-6 h-6" />
-                <span>Custom CRM Development</span>
+                <a href="/services/custom-crm-development" class="flex items-center gap-3 w-full">
+                  <img src="@/assets/icons/services/color/customer-relationship-management.png" alt="Custom CRM Development" class="w-6 h-6" />
+                  <span>Custom CRM Development</span>
+                </a>
               </li>
               <li class="py-3 border-t border-gray-200 flex items-center gap-3">
-                <img src="../assets/icons/services/color/marketing.png" alt="Digital Marketing" class="w-6 h-6" />
-                <span>Digital Marketing</span>
+                <a href="/services/digital-marketing" class="flex items-center gap-3 w-full">
+                  <img src="../assets/icons/services/color/marketing.png" alt="Digital Marketing" class="w-6 h-6" />
+                  <span>Digital Marketing</span>
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="w-full h-px bg-gray-200"></div>
         <!-- Other Menu Items -->
-        <button class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
+        <a href="/case-studies" class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
           <span>CASE STUDIES</span>
-        </button>
+        </a>
         <div class="w-full h-px bg-gray-200"></div>
-        <button class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
+        <a href="/solutions" class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
           <span>SOLUTIONS</span>
-        </button>
+        </a>
         <div class="w-full h-px bg-gray-200"></div>
-        <button class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
+        <a href="/blogs" class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
           <span>BLOGS</span>
-        </button>
+        </a>
         <div class="w-full h-px bg-gray-200"></div>
-        <button class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
+        <a href="/about-us" class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
           <span>ABOUT US</span>
-        </button>
+        </a>
         <div class="w-full h-px bg-gray-200"></div>
-        <button class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
+        <a href="/career" class="w-full flex justify-between items-center py-3 font-semibold text-left focus:outline-none">
           <span>CAREER</span>
-        </button>
+        </a>
         <div class="w-full h-px bg-gray-200"></div>
         <!-- Contact Info & Socials -->
         <div class="mt-6">
           <div class="flex items-center mb-4">
-            <img src="../assets/icons/address.svg" class="w-5 h-5 mr-2" alt="Address" />
-            <span class="text-sm">56A/69 Putiary Banerjee Para Road, Kolkata, West Bengal 700041</span>
+            <img src="@/assets/icons/address.svg" class="w-5 h-5 mr-2" alt="Address" />
+            <a href="https://maps.app.goo.gl/zUCEqAfM52NHRgRW7" class="text-sm hover:underline" target="_blank" rel="noopener">56A/69 Putiary Banerjee Para Road, Kolkata, West Bengal 700041</a>
           </div>
           <div class="flex items-center mb-4">
-            <img src="../assets/icons/call.svg" class="w-5 h-5 mr-2" alt="Phone" />
-            <span class="text-sm">033 3544 8771</span>
+            <img src="@/assets/icons/call.svg" class="w-5 h-5 mr-2" alt="Phone" />
+            <a href="tel:+913335448771" class="text-sm hover:underline">033 3544 8771</a>
           </div>
           <div class="flex items-center mb-4">
-            <img src="../assets/icons/mail.svg" class="w-5 h-5 mr-2" alt="Mail" />
-            <span class="text-sm">support@vervebytes.com</span>
+            <img src="@/assets/icons/mail.svg" class="w-5 h-5 mr-2" alt="Mail" />
+            <a href="mailto:contact@auravenisolutions.com" class="text-sm hover:underline">contact@auravenisolutions.com</a>
           </div>
           <div class="flex space-x-4 mt-4">
-            <img src="../assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6" />
-            <img src="../assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
-            <img src="../assets/icons/twitter.svg" alt="Twitter/X" class="w-6 h-6" />
-            <img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
-            <img src="../assets/icons/youtube.svg" alt="YouTube" class="w-6 h-6" />
+            <a href="https://www.facebook.com/profile.php?id=61574948128293" target="_blank" rel="noopener">
+              <img src="@/assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6" />
+            </a>
+            <!-- <a href="https://instagram.com/auraveni" target="_blank" rel="noopener">
+              <img src="@/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
+            </a> -->
+            <!-- <a href="https://twitter.com/auraveni" target="_blank" rel="noopener">
+              <img src="@/assets/icons/twitter.svg" alt="Twitter/X" class="w-6 h-6" />
+            </a> -->
+            <a href="https://www.linkedin.com/company/auraveni/" target="_blank" rel="noopener">
+              <img src="@/assets/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
+            </a>
+            <a href="https://www.youtube.com/@auraveni" target="_blank" rel="noopener">
+              <img src="@/assets/icons/youtube.svg" alt="YouTube" class="w-6 h-6" />
+            </a>
           </div>
         </div>
       </div>
