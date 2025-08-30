@@ -42,6 +42,11 @@ import EnterpriseApp from './pages/services/EnterpriseApp.vue';
 import EcommerceApp from './pages/services/EcommerceApp.vue';
 import CrossPlatform from './pages/services/CrossPlatform.vue';
 import Android from './pages/services/Android.vue';
+import CaseStudy1 from './pages/case-studies/CaseStudy1.vue';
+import CaseStudy2 from './pages/case-studies/CaseStudy2.vue';
+import Solution1 from './pages/solutions/Solution1.vue';
+import Solution2 from './pages/solutions/Solution2.vue';
+import FlutterDeveloper from './pages/careers/FlutterDeveloper.vue';
 
 const routes = [
   {
@@ -497,9 +502,61 @@ const routes = [
     },
   },
   {
+    path: '/case-studies/case-studies-1',
+    name: 'CaseStudies1',
+    component: CaseStudy1,
+    meta: {
+      title: 'Case Studies | Auraveni Solutions',
+      metaName: 'Case Studies',
+      ogSiteName: 'Auraveni Solutions',
+      ogImage: '/vite.svg',
+      metaDescription: 'See our successful projects and case studies at Auraveni Solutions.',
+      metaKeywords: 'case studies, projects, auraveni',
+    },
+  },
+  {
+    path: '/case-studies/case-studies-1',
+    name: 'CaseStudies2',
+    component: CaseStudy2,
+    meta: {
+      title: 'Case Studies | Auraveni Solutions',
+      metaName: 'Case Studies',
+      ogSiteName: 'Auraveni Solutions',
+      ogImage: '/vite.svg',
+      metaDescription: 'See our successful projects and case studies at Auraveni Solutions.',
+      metaKeywords: 'case studies, projects, auraveni',
+    },
+  },
+  {
     path: '/solutions',
     name: 'Solutions',
     component: Solutions,
+    meta: {
+      title: 'Solutions | Auraveni Solutions',
+      metaName: 'Solutions',
+      ogSiteName: 'Auraveni Solutions',
+      ogImage: '/vite.svg',
+      metaDescription: 'Discover our tailored solutions for your business needs.',
+      metaKeywords: 'solutions, business, auraveni',
+    },
+  },
+  {
+    path: '/solutions/solution-1',
+    name: 'Solution1',
+    component: Solution1,
+    meta: {
+      title: 'Solutions | Auraveni Solutions',
+      metaName: 'Solutions',
+      ogSiteName: 'Auraveni Solutions',
+      ogImage: '/vite.svg',
+      metaDescription: 'Discover our tailored solutions for your business needs.',
+      metaKeywords: 'solutions, business, auraveni',
+    },
+  },
+  {
+    path: '/solutions/solution-2',
+    name: 'Solution2',
+    component: Solution2,
     meta: {
       title: 'Solutions | Auraveni Solutions',
       metaName: 'Solutions',
@@ -574,6 +631,18 @@ const routes = [
     path: '/career',
     name: 'Career',
     component: Career,
+    meta: {
+      title: 'Career | Auraveni Solutions',
+      ogSiteName: 'Auraveni Solutions',
+      ogImage: '/vite.svg',
+      metaDescription: 'Join our team! Explore career opportunities at Auraveni Solutions.',
+      metaKeywords: 'career, jobs, auraveni',
+    },
+  },
+  {
+    path: '/careers/flutter-developer',
+    name: 'FlutterDeveloper',
+    component: FlutterDeveloper,
     meta: {
       title: 'Career | Auraveni Solutions',
       ogSiteName: 'Auraveni Solutions',
